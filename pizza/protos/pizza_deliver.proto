@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service PizzaDelivery {
+    rpc deliver_pizza (stream PizzaRequest) returns (stream PizzaResponse);
+}
+
+message PizzaRequest{
+    string customer = 1;
+}
+
+message PizzaResponse{
+    string rsp = 1;
+}
